@@ -1,0 +1,260 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.3
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+
+section
+	padding:
+		top: 40px
+		bottom: 88px
+
+
+.sect-title
+	font-size: 32px
+	text-transform: uppercase
+	color: $text-color
+	text-align: center
+	margin-bottom: 30px
+
+
+.header
+	background-color: #fff
+	padding: 12px 0
+
+.logo
+	&-name
+		font-size: 24px
+		font-weight: 600
+	&-desc
+		margin: 0
+		color: #666
+.header-phones
+	text-align: right
+	&__phone
+		display: inline-block
+		font-size: 30px
+		font-weight: 600
+		a
+			text-decoration: none
+			color: 	#2e0e83
+		i
+			color: #666
+			cursor: pointer
+	.num1
+		margin-right: 45px
+	.num2
+		border-bottom: 1px dashed
+
+.other-phones
+	padding: 35px
+	background-color: white
+	position: absolute
+	right: 0
+	z-index: 20
+
+.other-phone-link
+	display: block
+	margin-bottom: 5px
+
+
+.main
+	padding: 50px 0
+	background-color: rgb(246, 244, 244)
+	&-title
+		font-size: 32px
+		line-height: 1.4
+		margin-bottom: 20px
+	&-phone
+		font-size: 32px
+		margin-bottom: 20px
+	&-btn
+		padding: 6px 32px
+		background-color: #5d1dff
+		color: #fff
+		border: none
+		border-radius: 5px
+		cursor: pointer
+		&:hover
+			background-color: #2e0e83
+			text-decoration: none
+			color: #fff
+
+.services
+	&-item-header
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		min-height: 190px
+		padding: 0 20px 
+		text-align: center
+		background-color: #333
+		background-size: 100% auto
+		background-repeat: no-repeat
+		color: $light
+		position: relative
+		margin-bottom: 18px
+		z-index: 0
+		&::before
+			content: ''
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(#000, 0.6)
+			z-index: 1
+
+		&_bg1
+			background-image: url(../img/services/gazel1.jpg)
+		
+		&_bg2
+			background-image: url(../img/services/gruzchiki1.jpg)
+
+		&_bg3
+			background-image: url(../img/services/otogrev1.jpg)
+		
+		&__title
+			font-size: 24px
+			font-weight: bold
+			margin-bottom: 6px
+			z-index: 1
+		&__title-desc
+			z-index: 1
+	&-item-text
+		font-size: 15px
+		margin-bottom: 10px
+	&-item-link
+		text-align: right
+
+.price
+	background-color: #F2F2F2
+	&-item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding:
+			top: 20px
+			bottom: 20px
+		border-bottom: 1px solid #ccc
+		&:last-child
+			border-bottom: none
+		&__name
+			font-size: 22px
+			font-weight: bold
+		&__price
+			font-size: 22px
+			font-weight: bold
+			text-align: right
+
+.feedback
+	position: relative
+	padding:
+		top: 66px
+		bottom: 66px 
+	background: #ccc url(../img/feedback-img.jpg) no-repeat center
+	background-size: cover
+	z-index: 0
+	&::before
+		content: ''
+		position: absolute
+		display: block
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, 0.6)
+		z-index: 0
+	&-form
+		position: relative
+		z-index: 2
+		margin: auto
+		padding:
+			top: 60px
+			bottom: 60px
+		text-align: center
+		width: 75%
+		background-color: #fff
+		&__title-desc
+			margin-bottom: 30px
+			color: #666
+.form
+	&-input
+		margin-right: 20px
+		border: 0
+		border-bottom: 2px solid #666
+		padding: 10px
+	&-btn
+		border: 2px solid black
+		background-color: #fff
+		padding: 10px
+		color: #000
+		font-size: 14px
+		font-weight: bold
+		cursor: pointer
+
+.our-auto
+	&-item
+		padding:
+			top: 20px
+			bottom: 20px
+		font-size: 22px
+		font-weight: bold
+		border-bottom: 1px solid #ccc
+		&:last-child
+			border-bottom: none
+		&__list
+			margin-bottom: 0
+			margin-top: 15px
+			list-style-type: none
+			font-size: 16px
+			font-weight: normal
+			li
+				line-height: 1.8
+
+footer
+	padding:
+		top: 25px
+		bottom: 25px
+	background-color: #2E373E
+	color: #fff
+	text-align: center
+	.footer-social
+		margin-top: 10px
+		a
+			padding: 5px
+			color: #fff
+			font-size: 25px
+@import "media" // Always at the end
